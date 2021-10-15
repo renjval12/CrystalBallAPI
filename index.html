@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Ball API 🔮</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: white;
+            font-family: 'Josefin Sans', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 5% 15%;
+            background: linear-gradient(rgb(155, 200, 255), rgb(55, 144, 252), rgb(9, 71, 147));
+        }
+
+        #intro {
+            display: flex;
+            gap: 5%;
+            align-items: center;
+            justify-content: space-around;
+            padding: 3%;
+        }
+        #intro-text{
+            width: 600px;
+        }
+
+        .gap {
+            padding: 1%;
+        }
+
+        .params {
+            padding-left: 5%;
+        }
+
+        dt {
+            font-weight: 700;
+        }
+
+        .last {
+            padding-left: 2%;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2em;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        pre {
+            background: rgb(0, 28, 72);
+            padding: 2%;
+        }
+
+        p a {
+            color: rgb(155, 200, 255)
+        }
+        p, span {
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="gap">Crystal Ball API</h1>
+    <div id="intro">
+        <div id="intro-text">
+            <h2 class="gap">Do you have Questions you need answers to?</h2>
+            <h3 class="gap">Ask the Crystal Ball API</h3>
+            <p class="gap">Crystal Ball REST API allows you to ask your burning questions to the "Crystal Ball" and in
+                return
+                receive answers you so desperately seek.</p>
+        </div>
+        <img src="https://media3.giphy.com/media/Y4DeltZ8VmGnTJGyPe/giphy.gif?cid=790b76110a2c3daa63b7bc5ea00bd8576159a101c3f01fe1&rid=giphy.gif&ct=g"/>
+    </div>
+    <h3 class="gap">URL </h3>
+    <pre>
+        <span></span>
+        <span class="n">GET</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">crystalballapi</span><span class="o">.</span><span class="n">herokuapp</span><span class="o">.</span><span class="n">com</span> 
+    </pre>
+    <h3 class="gap">Parameters</h3>
+    <dl class="params">
+        <dt>/response :</dt>
+        <dd>
+            <p class="last">Retrieves a response to a question.</p>
+        </dd>
+    </dl>
+    <h3 class="gap">Example</h3>
+    <p>Following examples are to receive a random response</p>
+    <h4 class="gap">cURL</h4>
+    <pre>
+        <span></span>
+        <span class="n">curl</span> <span class="o">-</span><span class="n">X</span> <span class="n">GET</span> \
+        <span class="s1">'https://crystalballapi.herokuapp.com/response'</span>
+        </pre>
+    <h4 class="gap">Node.js</h4>
+    <pre><span></span><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'request'</span><span class="p">);</span>
+
+        <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">url</span><span class="o">:</span> <span class="s1">'https://crystalballapi.herokuapp.com/response'</span><span class="p">,</span>
+        <span class="nx">method</span><span class="o">:</span> <span class="s1">'GET'</span>
+        <span class="p">};</span>
+        
+        <span class="kd">function</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">error</span> <span class="o">&amp;&amp;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">statusCode</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">body</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="p">}</span>
+        
+        <span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+        </pre>
+
+    <h3 class="gap">Credit</h3>
+    <p>"Crystal Ball API" was created by <a href="https://github.com/renjval12">ReneeJoy Valentine</a> . Please feel
+        free to use and contribute to this small API.</p>
+
+</body>
+
+</html>

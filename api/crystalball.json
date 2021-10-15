@@ -1,23 +1,23 @@
 [
     {
-        "response": "I hear the whispers from the Fates and they say YES."
+        "answer": "I hear the whispers from the Fates and they say YES."
     },
     {
-        "response": "If you travel down this path, you will surely find trouble, NO."
+        "answer": "If you travel down this path, you will surely find trouble, NO."
     },
     {
-        "response": "My vision is hazy, try again later."
+        "answer": "My vision is hazy, try again later."
     },
     {
-        "response": "Clear your mind, and try again."
+        "answer": "Clear your mind, and try again."
     },
     {
-        "response": "This is your destiny, YES."
+        "answer": "This is your destiny, YES."
     },
     {
-        "response": "Outlook does not seem positive, NO."
+        "answer": "Outlook does not seem positive, NO."
     },
     {
-        "response": "Perhaps using your intuition, will serve you best on this matter."
+        "answer": "Perhaps using your intuition, will serve you best on this matter."
     }
 ]

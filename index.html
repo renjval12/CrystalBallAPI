@@ -32,7 +32,8 @@
             justify-content: space-around;
             padding: 3%;
         }
-        #intro-text{
+
+        #intro-text {
             width: 600px;
         }
 
@@ -76,7 +77,9 @@
         p a {
             color: rgb(155, 200, 255)
         }
-        p, span {
+
+        p,
+        span {
             font-size: 1.1rem;
         }
     </style>
@@ -92,7 +95,8 @@
                 return
                 receive answers you so desperately seek.</p>
         </div>
-        <img src="https://media3.giphy.com/media/Y4DeltZ8VmGnTJGyPe/giphy.gif?cid=790b76110a2c3daa63b7bc5ea00bd8576159a101c3f01fe1&rid=giphy.gif&ct=g"/>
+        <img
+            src="https://media3.giphy.com/media/Y4DeltZ8VmGnTJGyPe/giphy.gif?cid=790b76110a2c3daa63b7bc5ea00bd8576159a101c3f01fe1&rid=giphy.gif&ct=g" />
     </div>
     <h3 class="gap">URL </h3>
     <pre>
@@ -101,36 +105,45 @@
     </pre>
     <h3 class="gap">Parameters</h3>
     <dl class="params">
-        <dt>/response :</dt>
+        <dt>/answer :</dt>
         <dd>
-            <p class="last">Retrieves a response to a question.</p>
+            <p class="last">Retrieves a answer to a question.</p>
         </dd>
     </dl>
     <h3 class="gap">Example</h3>
-    <p>Following examples are to receive a random response</p>
+    <p>Following examples are to receive a random answer</p>
     <h4 class="gap">cURL</h4>
     <pre>
         <span></span>
         <span class="n">curl</span> <span class="o">-</span><span class="n">X</span> <span class="n">GET</span> \
-        <span class="s1">'https://crystalballapi.herokuapp.com/response'</span>
+        <span class="s1">'https://crystalballapi.herokuapp.com/answer'</span>
         </pre>
     <h4 class="gap">Node.js</h4>
     <pre><span></span><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'request'</span><span class="p">);</span>
 
         <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="nx">url</span><span class="o">:</span> <span class="s1">'https://crystalballapi.herokuapp.com/response'</span><span class="p">,</span>
+        <span class="nx">url</span><span class="o">:</span> <span class="s1">'https://crystalballapi.herokuapp.com/answer'</span><span class="p">,</span>
         <span class="nx">method</span><span class="o">:</span> <span class="s1">'GET'</span>
         <span class="p">};</span>
         
-        <span class="kd">function</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">error</span> <span class="o">&amp;&amp;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">statusCode</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">function</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">answer</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">error</span> <span class="o">&amp;&amp;</span> <span class="nx">answer</span><span class="p">.</span><span class="nx">statusCode</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
             <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">body</span><span class="p">);</span>
         <span class="p">}</span>
         <span class="p">}</span>
         
         <span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
         </pre>
-
+    <h3 class="gap">Answers</h3>
+    <dl class="params">
+        <dt>"I hear the whispers from the Fates and they say YES."</dt>
+        <dt>"If you travel down this path, you will surely find trouble, NO."</dt>
+        <dt>"My vision is hazy, try again later."</dt>
+        <dt>"Clear your mind, and try again."</dt>
+        <dt>"This is your destiny, YES."</dt>
+        <dt>"Outlook does not seem positive, NO."</dt>
+        <dt>"Perhaps using your intuition, will serve you best on this matter."</dt>
+    </dl>
     <h3 class="gap">Credit</h3>
     <p>"Crystal Ball API" was created by <a href="https://github.com/renjval12">ReneeJoy Valentine</a> . Please feel
         free to use and contribute to this small API.</p>

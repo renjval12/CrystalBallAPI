@@ -19,7 +19,7 @@ app.get('/', async (req, res) => {
     }
 });
 
-app.get('/response', async (req, res) => {
+app.get('/answer', async (req, res) => {
     try {
         res.status(200).json(
             data[Math.round(Math.random() * data.length)]

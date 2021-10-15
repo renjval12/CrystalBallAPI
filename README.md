@@ -5,8 +5,8 @@ Crystal Ball REST API allows developers to get responses to random questions use
         GET: https://crystalballapi.herokuapp.com 
 ## Parameters
 - /response:
-    - Retrieves a response to a question.
-## Responses
+    - Retrieves a answer to a question.
+## Answers
 - "I hear the whispers from the Fates and they say YES."
 - "If you travel down this path, you will surely find trouble, NO."
 - "My vision is hazy, try again later."
@@ -16,12 +16,12 @@ Crystal Ball REST API allows developers to get responses to random questions use
 - "Perhaps using your intuition, will serve you best on this matter."
 
 ## Usage
-        GET: https://crystalballapi.herokuapp.com/response 
+        GET: https://crystalballapi.herokuapp.com/answer 
 ### Node.js
         const request = require('request');
 
         let options = {
-        url: 'https://crystalballapi.herokuapp.com/response ',
+        url: 'https://crystalballapi.herokuapp.com/answer ',
         method: 'POST'
         };
 
@@ -35,4 +35,4 @@ Crystal Ball REST API allows developers to get responses to random questions use
 
 ### Response 
 
-        {"affirmation": "I am enough"}
+        {"answer": "I hear the whispers from the Fates and they say YES."}
